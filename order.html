@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gold Bakery | Order</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="nav">
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="Gold Bakery logo"><span>Gold Bakery</span></a>
+    <div class="nav-links">
+      <a href="index.html#showcase">Products</a>
+      <a href="menu.html">Menu</a>
+      <a href="story.html">Story</a>
+      <a class="nav-cta" href="order.html">Order</a>
+    </div>
+  </nav>
+
+  <section class="page-hero">
+    <img class="page-logo" src="assets/logo.png" alt="Gold Bakery logo">
+    <h1>Place Your Order</h1>
+    <p>Orders are placed through the website. For questions or custom requests, contact Gold Bakery on Instagram.</p>
+  </section>
+
+  <section class="order-grid">
+    <div class="form-card">
+      <h2 class="form-title">Order details</h2>
+      <p class="small">Working hours for pickup/delivery slot booking: 5:00 PM to 8:00 PM. Seven daily time slots are available.</p>
+      <form id="orderForm">
+        <div class="form-row">
+          <div class="field"><label for="name">Full name</label><input id="name" name="name" required></div>
+          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field">
+            <label for="product">Product</label>
+            <select id="product" name="product">
+              <option value="berryCheesecake">Berry Cheesecake</option>
+              <option value="chocoCheesecake">Chocolate Cheesecake</option>
+              <option value="bites">Cheesecake Bites</option>
+              <option value="goodieJar">Goodie Jars</option>
+              <option value="goodieTray">Goodie Tray</option>
+              <option value="stuffedOnions">Stuffed Onions</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="sizeOption">Size / option</label>
+            <select id="sizeOption" name="sizeOption"></select>
+            <div class="helper" id="sizeHint">Select a product to view available sizes and pricing.</div>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="field"><label for="deliveryDate">Preferred date</label><input id="deliveryDate" name="deliveryDate" type="date" required><div id="preorderHint" class="helper"></div></div>
+          <div class="field"><label for="timeSlot">Time slot</label><select id="timeSlot" name="timeSlot"></select><div class="helper">Slots: 5:00, 5:30, 6:00, 6:30, 7:00, 7:30, 8:00</div></div>
+        </div>
+        <div class="field">
+          <label>Payment method</label>
+          <div class="radio-group">
+            <label><input type="radio" name="paymentMethod" value="Card payment" checked> Card</label>
+            <label><input type="radio" name="paymentMethod" value="Apple Pay"> Apple Pay</label>
+            <label><input type="radio" name="paymentMethod" value="Bank transfer"> Bank transfer</label>
+          </div>
+          <div class="helper">Production version: secure checkout and MySQL order storage would be added here.</div>
+        </div>
+        <div class="field"><label for="notes">Notes</label><textarea id="notes" name="notes" placeholder="Allergies, gift note, delivery notes, etc."></textarea></div>
+        <button class="btn" type="submit">Continue to payment</button>
+        <div class="summary-box" id="summaryBox">After clicking, this demo will show how the order summary would appear before online payment.</div>
+      </form>
+    </div>
+
+    <div class="info-card">
+      <h3 style="margin-top:0">Ordering rules</h3>
+      <ul class="list-clean">
+        <li>Cheesecake slices, Cheesecake Bites, Goodie Jars, and Goodie Tray: minimum 1 day prior.</li>
+        <li>Whole cheesecakes and Stuffed Onions: minimum 2 days prior.</li>
+        <li>Customers can choose any date up to 7 days ahead.</li>
+        <li>Time slots run from 5:00 PM to 8:00 PM in 30-minute intervals.</li>
+        <li>Bundle savings apply on multi-jar goodie orders.</li>
+      </ul>
+      <div class="note-box"><strong>Questions?</strong><br>For custom requests or questions, contact us through Instagram — not WhatsApp in this version.</div>
+      <p style="margin-top:18px"><a class="instagram-link" href="https://www.instagram.com/" target="_blank" rel="noreferrer">Instagram support</a></p>
+    </div>
+  </section>
+
+  <footer class="footer"><div class="footer-inner"><strong>Gold Bakery</strong><span>Website payments in demo form · Instagram used for questions and support.</span></div></footer>
+  <script src="script.js"></script>
+</body>
+</html>
